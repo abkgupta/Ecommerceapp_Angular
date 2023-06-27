@@ -48,7 +48,7 @@ this.showLogin=true;
   
     cartDataList.forEach((product:product, index)=>{
       let cartData:cart={
-        ...product,
+        ...product,               // spread operator
         productId:product.id,
         userId
       }

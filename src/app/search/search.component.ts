@@ -19,8 +19,7 @@ export class SearchComponent implements OnInit {
       this.searchResult=result;
       
     })
-    
-
+  
   }
 
 }

@@ -95,8 +95,12 @@ export class ProductService {
   }
   orderList() {
     let userStore = localStorage.getItem('user');
-    let userData = userStore && JSON.parse(userStore);
-    return this.http.get<order[]>('http://localhost:3000/orders?userId=' + userData.id);
+    // let userData = userStore && JSON.parse(userStore);
+    let userData: any
+    if(userStore) userData = JSON.parse(userStore);
+    console.log(userData)
+     return this.http.get<order[]>('http://localhost:3000/orders?userId=' + userData.id);
+    
   }
 
   deleteCartItems(cartId: number) {
